@@ -5,11 +5,11 @@ import math
 import cmath
 #导入数学模块，高数模块，小数模块（虽然没用上），Excel读取模块
 
-workbook = xlrd.open_workbook('Fluid.xls')
+workbook = xlrd.open_workbook('File name')
 
 print('文件导入成功','\n')
 
-sheet1 = workbook.sheet_by_index(4)
+sheet1 = workbook.sheet_by_index('''index''')
 nrows1 = sheet1.nrows
 ncols1 = sheet1.ncols
 
@@ -31,3 +31,4 @@ for i in range(2,nrows1):
     print('第{0}行数据的标准差为{1:0.3f}'.format(i - 1, abs(cmath.sqrt(sqsum))))
 
 # 标准差运算模块
+# 中间的range范围取决于你的表格数据在哪
