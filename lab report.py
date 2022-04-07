@@ -45,7 +45,7 @@ for i in range(2, nrows1):
         sqsum += (sheet1.cell_value(i, j) - avg) ** 2
     #    print('第{0}行数据的方差为{1:0.3f}'.format(i - 1, sqsum)) 计算方差，可不用
     error = max(max(A) - avg, avg - min(A))
-    print('第{0}行数据的标准差为{1:0.3f}'.format(i - 1, abs(cmath.sqrt(sqsum))))
-    print('第{0}行数据的值为{1:0.3f}+-{2:0.3f}'.format(i - 1, avg, error))
+    print('第{0}行数据的标准差为{1:0.3f}'.format(i - 1, abs(cmath.sqrt(sqsum))),end='  ')
+    print('数值为{0:0.3f}+-{1:0.3f}'.format(avg, error))
 
 # 标准差运算模块
